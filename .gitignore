@@ -1,0 +1,7 @@
+# Build output: ISOs, images, downloaded library (tens of GB). Rebuild with RUNBOOK.md.
+/out/
+# Your own map highlight, made by content/tools/make_home_area.py.
+/portal/src/data/home-area.geojson
+__pycache__/
+*.pyc
+.DS_Store

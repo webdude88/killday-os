@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Battery saver
+Comment=Dim the screen and cut power use
+Exec=/usr/local/bin/killday-battery-saver
+Icon=battery
+Terminal=false
+Categories=System;

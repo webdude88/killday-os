@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=The Kill-Day Almanac
+Comment=Open the offline library
+Exec=/usr/lib/killday/open-almanac
+Icon=killday-skull
+Terminal=false
+Categories=Education;

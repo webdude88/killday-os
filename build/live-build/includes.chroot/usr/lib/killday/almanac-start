@@ -1,0 +1,8 @@
+#!/bin/bash
+# Serves the library's portal when the partition is present, else the built-in copy.
+set -euo pipefail
+args=(--library /srv/library --portal /usr/share/killday/portal)
+[ -f /srv/library/almanac/index.html ] && args=(--library /srv/library --portal /srv/library/almanac)
+# The smoke test reaches the portal through QEMU port forwarding.
+grep -qw killday.test /proc/cmdline && args+=(--addr 0.0.0.0)
+exec /usr/lib/killday/killday-serve "${args[@]}"

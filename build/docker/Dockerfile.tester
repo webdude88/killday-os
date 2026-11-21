@@ -1,0 +1,8 @@
+# Native-architecture QEMU harness. It emulates x86_64 guests, so it must not
+# itself run under emulation on arm64 hosts.
+FROM debian:trixie
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    qemu-system-x86 qemu-utils ovmf seabios ipxe-qemu mtools python3 python3-pil curl \
+    chromium ca-certificates jq procps python3-websockets
+WORKDIR /work

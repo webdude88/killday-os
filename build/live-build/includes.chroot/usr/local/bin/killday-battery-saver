@@ -1,0 +1,16 @@
+#!/bin/bash
+# Toggles a low-power profile: dim screen, no compositor, conservative CPU.
+state="${XDG_RUNTIME_DIR:-/tmp}/killday-battery-saver"
+if [ -e "$state" ]; then
+    rm -f "$state"
+    brightnessctl -q set 70% || true
+    xfconf-query -c xfwm4 -p /general/use_compositing -s true
+    sudo -n tlp start >/dev/null 2>&1 || true
+    notify-send "Battery saver off" "Normal power settings restored."
+else
+    touch "$state"
+    brightnessctl -q set 25% || true
+    xfconf-query -c xfwm4 -p /general/use_compositing -s false
+    sudo -n tlp bat >/dev/null 2>&1 || true
+    notify-send "Battery saver on" "Screen dimmed and power use reduced."
+fi

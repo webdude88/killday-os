@@ -1,0 +1,7 @@
+[Configuration]
+FontName=JetBrains Mono 13
+ColorForeground=#8CFF5A
+ColorBackground=#000000
+ColorCursor=#8CFF5A
+ColorPalette=#0B0F0C;#FF3B4E;#8CFF5A;#E6EBE0;#9DB09A;#FF3B4E;#8CFF5A;#E6EBE0;#2A372D;#FF3B4E;#8CFF5A;#E6EBE0;#9DB09A;#FF3B4E;#8CFF5A;#FFFFFF
+MiscMenubarDefault=FALSE

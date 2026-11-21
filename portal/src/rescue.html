@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rescue my PC's files</title><link rel="icon" href="img/favicon.ico"><link rel="stylesheet" href="css/almanac.css"></head>
+<body data-pagefind-body><main><h1>Rescue my PC's files</h1><div class="prose" data-pagefind-meta="title:Rescue my PC's files">
+<p>Follow these steps in order. The goal is to copy your files somewhere safe before trying any repair.</p>
+<div class="warning">Do not run repair tools, format, or install anything on a failing disk until your files are copied off. Repairs write to the disk and can destroy what is left. Work on a copy whenever you can.</div>
+<h2>1. Get somewhere to put the files</h2>
+<p>Plug in a second USB drive or external disk with enough free space. Do not save rescued files to the disk you are rescuing.</p>
+<h2>2. Look at the disk first</h2>
+<p>Open the Thunar file manager. The PC's disks are listed on the left. Click one to mount it. Kill-Day OS never mounts your PC's disks by itself.</p>
+<p>If the disk is encrypted with BitLocker or LUKS, you will need its password or recovery key. Without it, the files cannot be read.</p>
+<h2>3. If the files are visible, copy them</h2>
+<p>Copy the most important files first: documents, photos, then everything else. A dying disk may only last for a short time. If a copy stalls on one file, skip that file and move on.</p>
+<h2>4. Check the disk's health</h2>
+<p>Open Terminal Emulator and run <code>sudo smartctl -H -A /dev/sda</code>, using the right disk name from the <code>lsblk</code> command. A result of FAILED, or reallocated or pending sectors above zero, means the disk is dying. Stop using it once your files are off.</p>
+<h2>5. If the disk is failing or will not mount</h2>
+<p>Make a full image with ddrescue. It skips bad areas and comes back to them later. The image must go to a different, larger disk.</p>
+<p><code>sudo ddrescue -d -r2 /dev/sda /media/survivor/BACKUP/disk.img /media/survivor/BACKUP/disk.map</code></p>
+<div class="warning">Check the order carefully. The first path is the failing disk and the second is the destination. Reversing them erases your data permanently.</div>
+<p>If the copy is interrupted, run the same command again. The map file lets it pick up where it stopped.</p>
+<h2>6. Recover deleted files or lost partitions</h2>
+<p>Run <code>sudo testdisk disk.img</code> on the image, or <code>sudo photorec disk.img</code> to pull out photos and documents by file type. Always save recovered files to a different disk.</p>
+<h2>7. When to stop</h2>
+<p>If the disk clicks, grinds or is not detected at all, turn the PC off. Every extra minute of running can cause more damage. If the data is worth paying for, a professional recovery lab is the next step.</p>
+</div></main><script src="js/common.js"></script><script>KD.header();</script></body></html>

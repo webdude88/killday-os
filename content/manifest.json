@@ -1,0 +1,1631 @@
+{
+ "disclaimers": {
+  "general": "REFERENCE ONLY. This encyclopedia may be incomplete or out of date. It is reference material and not a substitute for professional medical, legal or safety advice.",
+  "medical": "REFERENCE ONLY. This is reference material and not a substitute for professional medical care. If someone is seriously hurt or ill, contact emergency services or a qualified clinician if there is any way to do so.",
+  "chemical": "REFERENCE ONLY. This is reference material and not a substitute for professional guidance. Chemicals can injure, poison or kill. Follow exact quantities and never mix chemicals unless the guide specifically tells you to.",
+  "electrical": "REFERENCE ONLY. This is reference material and not a substitute for a qualified electrician. Electricity can kill. Disconnect power and verify it is off before touching any conductor.",
+  "food": "REFERENCE ONLY. This is reference material and not a substitute for professional food-safety guidance. Improper canning can cause fatal botulism. Never eat a wild plant or mushroom unless an expert has positively identified it."
+ },
+ "excluded": [
+  {
+   "title": "FM 21-76 and FM 3-05.70 US Army Survival manuals",
+   "reason": "Public domain, but both include a chapter on improvised weapons. Excluded under the no-weapons rule."
+  },
+  {
+   "title": "TM 31-210 Improvised Munitions Handbook and similar",
+   "reason": "Instructions for building explosives and weapons."
+  },
+  {
+   "title": "Kiwix zimgit-* collections (water, medicine, post-disaster, food, knots)",
+   "reason": "Bundles of third-party PDFs whose individual licenses could not be verified."
+  },
+  {
+   "title": "Canadian Prepper video ZIMs",
+   "reason": "YouTube content with no clear free license."
+  },
+  {
+   "title": "Where There Is No Doctor (Hesperian)",
+   "reason": "Copyrighted with limited permissions. Not confirmed for redistribution here."
+  },
+  {
+   "title": "ARRL band plan chart and license manuals",
+   "reason": "Copyrighted by ARRL. FCC Part 97 and the frequency table are used instead."
+  }
+ ],
+ "modules": [
+  {
+   "id": "general",
+   "title": "General reference",
+   "blurb": "Encyclopedia, dictionary, how-to books and travel guides.",
+   "disclaimer": "general",
+   "items": [
+    {
+     "id": "wikipedia-mini",
+     "title": "Wikipedia (introductions only)",
+     "kind": "zim",
+     "zim_dir": "wikipedia",
+     "zim_prefix": "wikipedia_en_all_mini",
+     "license": "CC BY-SA 4.0",
+     "source": "Wikipedia via Kiwix",
+     "tiers": [
+      "lite"
+     ],
+     "description": "The opening section of every English article.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_mini_2026-09.zim",
+     "path": "zim/wikipedia_en_all_mini_2026-09.zim",
+     "size": 14386799064,
+     "sha256": "350d8956ee3d7abe2839c464c3a983f93d6934a16c7f04b10715b49439dfd349",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "wikipedia-nopic",
+     "title": "Wikipedia (full text, no images)",
+     "kind": "zim",
+     "zim_dir": "wikipedia",
+     "zim_prefix": "wikipedia_en_all_nopic",
+     "license": "CC BY-SA 4.0",
+     "source": "Wikipedia via Kiwix",
+     "tiers": [
+      "plus",
+      "standard"
+     ],
+     "description": "Every English article, text only.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_nopic_2026-06.zim",
+     "path": "zim/wikipedia_en_all_nopic_2026-06.zim",
+     "size": 52690706555,
+     "sha256": "441a56d9e05b2d98f8ae9acb7986a513ed47904d73852c92dc6b7d50baa122e5",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "wikipedia-maxi",
+     "title": "Wikipedia (with images)",
+     "kind": "zim",
+     "zim_dir": "wikipedia",
+     "zim_prefix": "wikipedia_en_all_maxi",
+     "license": "CC BY-SA 4.0",
+     "source": "Wikipedia via Kiwix",
+     "tiers": [
+      "full"
+     ],
+     "description": "Every English article with images.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_maxi_2026-08.zim",
+     "path": "zim/wikipedia_en_all_maxi_2026-08.zim",
+     "size": 127418087648,
+     "sha256": "34162d18b9f96f494eac48a73a309c72e0bc95d85f76be405d0f5de795854aa6",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "wiktionary",
+     "title": "Wiktionary",
+     "kind": "zim",
+     "zim_dir": "wiktionary",
+     "zim_prefix": "wiktionary_en_all_nopic",
+     "license": "CC BY-SA 4.0",
+     "source": "Wiktionary via Kiwix",
+     "tiers": [
+      "standard",
+      "full"
+     ],
+     "description": "English dictionary.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/wiktionary/wiktionary_en_all_nopic_2026-08.zim",
+     "path": "zim/wiktionary_en_all_nopic_2026-08.zim",
+     "size": 9156425592,
+     "sha256": "5276f63a2e451518ec5b7c4452ca9a4f72fae48991da3fe7ebc47df74bae760a",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "wikibooks-nopic",
+     "title": "Wikibooks (no images)",
+     "kind": "zim",
+     "zim_dir": "wikibooks",
+     "zim_prefix": "wikibooks_en_all_nopic",
+     "license": "CC BY-SA 4.0",
+     "source": "Wikibooks via Kiwix",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard"
+     ],
+     "description": "Open textbooks and how-to books.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/wikibooks/wikibooks_en_all_nopic_2026-10.zim",
+     "path": "zim/wikibooks_en_all_nopic_2026-10.zim",
+     "size": 3544612812,
+     "sha256": "bda3410005656daeb523c81774e151b750cd5a8828f081ded0848cd7fdccba7c",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "wikibooks-maxi",
+     "title": "Wikibooks (with images)",
+     "kind": "zim",
+     "zim_dir": "wikibooks",
+     "zim_prefix": "wikibooks_en_all_maxi",
+     "license": "CC BY-SA 4.0",
+     "source": "Wikibooks via Kiwix",
+     "tiers": [
+      "full"
+     ],
+     "description": "Open textbooks and how-to books.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/wikibooks/wikibooks_en_all_maxi_2026-10.zim",
+     "path": "zim/wikibooks_en_all_maxi_2026-10.zim",
+     "size": 4739739728,
+     "sha256": "835014cde2c385f80a6388847fb8962429966a3a64a03b58552f1684cc83e7c8",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "wikivoyage-nopic",
+     "title": "Wikivoyage (no images)",
+     "kind": "zim",
+     "zim_dir": "wikivoyage",
+     "zim_prefix": "wikivoyage_en_all_nopic",
+     "license": "CC BY-SA 4.0",
+     "source": "Wikivoyage via Kiwix",
+     "tiers": [
+      "lite"
+     ],
+     "description": "Travel and regional guides.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/wikivoyage/wikivoyage_en_all_nopic_2026-09.zim",
+     "path": "zim/wikivoyage_en_all_nopic_2026-09.zim",
+     "size": 272495142,
+     "sha256": "4305c50550f065d83e70f75fd1d2016a694f5d67aa1e0ef00fdf6bb74fc092ac",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "wikivoyage-maxi",
+     "title": "Wikivoyage (with images)",
+     "kind": "zim",
+     "zim_dir": "wikivoyage",
+     "zim_prefix": "wikivoyage_en_all_maxi",
+     "license": "CC BY-SA 4.0",
+     "source": "Wikivoyage via Kiwix",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Travel and regional guides.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/wikivoyage/wikivoyage_en_all_maxi_2026-09.zim",
+     "path": "zim/wikivoyage_en_all_maxi_2026-09.zim",
+     "size": 1071168673,
+     "sha256": "ebaf235b4f95aa7f8666e0a613578577569eb6c81562ebcf397a7ba52173c848",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "medical",
+   "title": "Medical and first aid",
+   "blurb": "First aid, field medicine and clinical reference.",
+   "disclaimer": "medical",
+   "items": [
+    {
+     "id": "wikimed",
+     "title": "WikiMed medical encyclopedia",
+     "kind": "zim",
+     "zim_dir": "other",
+     "zim_prefix": "mdwiki_en_all_maxi",
+     "license": "CC BY-SA 4.0",
+     "source": "WikiProjectMed / MDWiki via Kiwix",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Plain-language clinical reference.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/other/mdwiki_en_all_maxi_2025-11.zim",
+     "path": "zim/mdwiki_en_all_maxi_2025-11.zim",
+     "size": 2302838768,
+     "sha256": "ee51df7860dbcab8c628aad32cf9972726ab708d784cdaf3e217d596920edf80",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "wikipedia-med-nopic",
+     "title": "Wikipedia: Medicine (no images)",
+     "kind": "zim",
+     "zim_dir": "wikipedia",
+     "zim_prefix": "wikipedia_en_medicine_nopic",
+     "license": "CC BY-SA 4.0",
+     "source": "Wikipedia via Kiwix",
+     "tiers": [
+      "lite"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_medicine_nopic_2026-10.zim",
+     "path": "zim/wikipedia_en_medicine_nopic_2026-10.zim",
+     "size": 1047708415,
+     "sha256": "718fadad40b3491be3fa8f95181a948e4d726f97a79a14e0ef1b90c6b2b03625",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "wikipedia-med-maxi",
+     "title": "Wikipedia: Medicine (with images)",
+     "kind": "zim",
+     "zim_dir": "wikipedia",
+     "zim_prefix": "wikipedia_en_medicine_maxi",
+     "license": "CC BY-SA 4.0",
+     "source": "Wikipedia via Kiwix",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_medicine_maxi_2026-10.zim",
+     "path": "zim/wikipedia_en_medicine_maxi_2026-10.zim",
+     "size": 1864210320,
+     "sha256": "9a1570f2f346aa18694ee520e0483f19b7447f69e0970e2f727c53ccf0dcc7d6",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "libretexts-med",
+     "title": "LibreTexts Medicine",
+     "kind": "zim",
+     "zim_dir": "libretexts",
+     "zim_prefix": "libretexts.org_en_med",
+     "license": "CC BY-NC-SA (varies by page, see each page)",
+     "source": "LibreTexts via Kiwix",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Open health-science textbooks.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/libretexts/libretexts.org_en_med_2025-01.zim",
+     "path": "zim/libretexts.org_en_med_2025-01.zim",
+     "size": 1192567339,
+     "sha256": "1def4fb3c76d347cfd2af9eabd8f8edefd24086cc17b476130f710214a5bbc1e",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "army-fm-4-25-11",
+     "title": "FM 4-25.11 First Aid (US Army, 2002)",
+     "kind": "pdf",
+     "url": "https://archive.org/download/FM4-25x11/FM4-25x11.pdf",
+     "license": "Public domain (US government work)",
+     "source": "US Army via Internet Archive",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Older but complete first aid manual. Check newer guidance when you can.",
+     "disclaimer": null,
+     "require_text": "public release",
+     "path": "docs/medical/army-fm-4-25-11.pdf",
+     "size": 2600639,
+     "sha256": "62010e9dcc9204badd5940154d8b580260776405dba7bd5d99544722fdeb4ce3",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "army-atp-4-02-11",
+     "title": "ATP 4-02.11 Casualty Response and First Aid (US Army, 2026)",
+     "kind": "pdf",
+     "url": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf",
+     "license": "Public domain (US government work)",
+     "source": "US Army Publishing Directorate",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Current Army first aid doctrine.",
+     "disclaimer": null,
+     "require_text": "public release",
+     "path": "docs/medical/army-atp-4-02-11.pdf",
+     "size": 12665561,
+     "sha256": "a4a0650f5bb14c1c7163b9b1e9f08bcc012fb3fe49ea4432f0ccaffb9af86542",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "self-reliance",
+   "title": "Self-reliance",
+   "blurb": "Repair guides, appropriate technology, gardening and practical Q&A.",
+   "disclaimer": "electrical",
+   "items": [
+    {
+     "id": "appropedia",
+     "title": "Appropedia",
+     "kind": "zim",
+     "zim_dir": "other",
+     "zim_prefix": "appropedia_en_all_maxi",
+     "license": "CC BY-SA 4.0",
+     "source": "Appropedia via Kiwix",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Appropriate technology and sustainable living.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/other/appropedia_en_all_maxi_2026-02.zim",
+     "path": "zim/appropedia_en_all_maxi_2026-02.zim",
+     "size": 581641351,
+     "sha256": "dcf200ba723c27397e1c9a2e4891ff91fa13993df1fa285315190d8525a53469",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "ifixit",
+     "title": "iFixit repair guides",
+     "kind": "zim",
+     "zim_dir": "ifixit",
+     "zim_prefix": "ifixit_en_all",
+     "license": "CC BY-NC-SA 3.0",
+     "source": "iFixit via Kiwix",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Step-by-step repair for phones, computers and appliances.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/ifixit/ifixit_en_all_2025-12.zim",
+     "path": "zim/ifixit_en_all_2025-12.zim",
+     "size": 3570695757,
+     "sha256": "9bb5f3408707fd0300c6ef47a425c3217187f144cd9154a928183816aa72eead",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "se-diy",
+     "title": "Stack Exchange: Home improvement",
+     "kind": "zim",
+     "zim_dir": "stack_exchange",
+     "zim_prefix": "diy.stackexchange.com_en_all",
+     "license": "CC BY-SA 4.0 (Stack Exchange contributors)",
+     "source": "Stack Exchange via Kiwix",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Community questions and answers.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/stack_exchange/diy.stackexchange.com_en_all_2026-10.zim",
+     "path": "zim/diy.stackexchange.com_en_all_2026-10.zim",
+     "size": 2086024326,
+     "sha256": "df795a094698282164ddee422814f88bf84841a2413c89ac23401efd71f22731",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "se-gardening",
+     "title": "Stack Exchange: Gardening and landscaping",
+     "kind": "zim",
+     "zim_dir": "stack_exchange",
+     "zim_prefix": "gardening.stackexchange.com_en_all",
+     "license": "CC BY-SA 4.0 (Stack Exchange contributors)",
+     "source": "Stack Exchange via Kiwix",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Community questions and answers.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/stack_exchange/gardening.stackexchange.com_en_all_2026-10.zim",
+     "path": "zim/gardening.stackexchange.com_en_all_2026-10.zim",
+     "size": 933097375,
+     "sha256": "8079b77ba40d830c31cdfa0e3f43a100e9d9488d856b10ffb3aca4e829594e6e",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "se-cooking",
+     "title": "Stack Exchange: Cooking",
+     "kind": "zim",
+     "zim_dir": "stack_exchange",
+     "zim_prefix": "cooking.stackexchange.com_en_all",
+     "license": "CC BY-SA 4.0 (Stack Exchange contributors)",
+     "source": "Stack Exchange via Kiwix",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Community questions and answers.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/stack_exchange/cooking.stackexchange.com_en_all_2026-10.zim",
+     "path": "zim/cooking.stackexchange.com_en_all_2026-10.zim",
+     "size": 238098128,
+     "sha256": "b5dc3a79b681be1afea32dd65e837c604e7dd7072f51622414a7a1d61fc52541",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "se-electronics",
+     "title": "Stack Exchange: Electronics",
+     "kind": "zim",
+     "zim_dir": "stack_exchange",
+     "zim_prefix": "electronics.stackexchange.com_en_all",
+     "license": "CC BY-SA 4.0 (Stack Exchange contributors)",
+     "source": "Stack Exchange via Kiwix",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Community questions and answers.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/stack_exchange/electronics.stackexchange.com_en_all_2026-10.zim",
+     "path": "zim/electronics.stackexchange.com_en_all_2026-10.zim",
+     "size": 4261397539,
+     "sha256": "b28e58b24ed55c602265729b34b0c6cc4e12228e6fe2f55df5b5e9eae169b266",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "se-ham",
+     "title": "Stack Exchange: Amateur radio",
+     "kind": "zim",
+     "zim_dir": "stack_exchange",
+     "zim_prefix": "ham.stackexchange.com_en_all",
+     "license": "CC BY-SA 4.0 (Stack Exchange contributors)",
+     "source": "Stack Exchange via Kiwix",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Community questions and answers.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/stack_exchange/ham.stackexchange.com_en_all_2026-10.zim",
+     "path": "zim/ham.stackexchange.com_en_all_2026-10.zim",
+     "size": 77108284,
+     "sha256": "cb8a0cd7ae0078279ace1cd2a05e60505aa2494c29e82dac1942bf4cd54fcf9c",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "se-sustainability",
+     "title": "Stack Exchange: Sustainability",
+     "kind": "zim",
+     "zim_dir": "stack_exchange",
+     "zim_prefix": "sustainability.stackexchange.com_en_all",
+     "license": "CC BY-SA 4.0 (Stack Exchange contributors)",
+     "source": "Stack Exchange via Kiwix",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Community questions and answers.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/stack_exchange/sustainability.stackexchange.com_en_all_2026-10.zim",
+     "path": "zim/sustainability.stackexchange.com_en_all_2026-10.zim",
+     "size": 27687333,
+     "sha256": "1516f252827b1409b7b55c1a44671e7e59b857bf2bb3732f3af62c996e40412f",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "title": "Food",
+   "blurb": "Canning, preservation, cooking and wild food references.",
+   "disclaimer": "food",
+   "items": [
+    {
+     "id": "usda-canning-intro",
+     "title": "USDA Home Canning: Introduction",
+     "kind": "pdf",
+     "url": "https://nchfp.uga.edu/papers/guide/INTRO_HomeCanrev0715.pdf",
+     "license": "Public domain (US government work), USDA Bulletin 539",
+     "source": "USDA via National Center for Home Food Preservation",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/food/usda-canning-intro.pdf",
+     "size": 467339,
+     "sha256": "c1683833cb4546858445c787f02bb4027710760bbff08c7e1b54889bf5521568",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "usda-canning-guide01",
+     "title": "USDA Home Canning: Principles of canning",
+     "kind": "pdf",
+     "url": "https://nchfp.uga.edu/papers/guide/GUIDE01_HomeCan_rev0715.pdf",
+     "license": "Public domain (US government work), USDA Bulletin 539",
+     "source": "USDA via National Center for Home Food Preservation",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/food/usda-canning-guide01.pdf",
+     "size": 3794234,
+     "sha256": "60d1e1a74a9fe61c19e6f5312a76d291905a8ca51b28d0def04c677294416d86",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "usda-canning-guide02",
+     "title": "USDA Home Canning: Fruit",
+     "kind": "pdf",
+     "url": "https://nchfp.uga.edu/papers/guide/GUIDE02_HomeCan_rev0715.pdf",
+     "license": "Public domain (US government work), USDA Bulletin 539",
+     "source": "USDA via National Center for Home Food Preservation",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/food/usda-canning-guide02.pdf",
+     "size": 1098841,
+     "sha256": "5f6918678e1410b72f9f87d652ebab2f5f5d39f3806db676399e5c785be0b58e",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "usda-canning-guide03",
+     "title": "USDA Home Canning: Tomatoes",
+     "kind": "pdf",
+     "url": "https://nchfp.uga.edu/papers/guide/GUIDE03_HomeCan_rev0715.pdf",
+     "license": "Public domain (US government work), USDA Bulletin 539",
+     "source": "USDA via National Center for Home Food Preservation",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/food/usda-canning-guide03.pdf",
+     "size": 976490,
+     "sha256": "6f8d166be89c7260964bfa4746fae72e79164f19a712672b0c1aa3bb902d18ff",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "usda-canning-guide04",
+     "title": "USDA Home Canning: Vegetables",
+     "kind": "pdf",
+     "url": "https://nchfp.uga.edu/papers/guide/GUIDE04_HomeCan_rev0715.pdf",
+     "license": "Public domain (US government work), USDA Bulletin 539",
+     "source": "USDA via National Center for Home Food Preservation",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/food/usda-canning-guide04.pdf",
+     "size": 2013613,
+     "sha256": "bb1d6ccce65146b5caad8bdaf766424c702119a90aa834b25269816da165641f",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "usda-canning-guide05",
+     "title": "USDA Home Canning: Meat and seafood",
+     "kind": "pdf",
+     "url": "https://nchfp.uga.edu/papers/guide/GUIDE05_HomeCan_rev0715.pdf",
+     "license": "Public domain (US government work), USDA Bulletin 539",
+     "source": "USDA via National Center for Home Food Preservation",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/food/usda-canning-guide05.pdf",
+     "size": 1356485,
+     "sha256": "bffe17ee5a99d5b3393894b811508cbe797d30685b1b91d13496d7a768b589b7",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "usda-canning-guide06",
+     "title": "USDA Home Canning: Fermented food and pickles",
+     "kind": "pdf",
+     "url": "https://nchfp.uga.edu/papers/guide/GUIDE06_HomeCan_rev0715.pdf",
+     "license": "Public domain (US government work), USDA Bulletin 539",
+     "source": "USDA via National Center for Home Food Preservation",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/food/usda-canning-guide06.pdf",
+     "size": 3173534,
+     "sha256": "fa4be9f7ac718801178f4f04efa169d74b8c64757d35aa29aa8226fbdaeee4bf",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "usda-canning-guide07",
+     "title": "USDA Home Canning: Jams and jellies",
+     "kind": "pdf",
+     "url": "https://nchfp.uga.edu/papers/guide/GUIDE07_HomeCan_rev0715.pdf",
+     "license": "Public domain (US government work), USDA Bulletin 539",
+     "source": "USDA via National Center for Home Food Preservation",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/food/usda-canning-guide07.pdf",
+     "size": 1300368,
+     "sha256": "6023faf9ea45f8e20078c54c5d273a7717ce17c66eba57a18f363ba54021e411",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "usfs-gtr-513",
+     "title": "Forest Service GTR-513: Northwest forest plants and fungi",
+     "kind": "pdf",
+     "url": "https://www.fs.usda.gov/pnw/pubs/pnw_gtr513.pdf",
+     "license": "Public domain (US government work)",
+     "source": "USDA Forest Service",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Species reference, not a foraging field guide. It does not replace expert identification.",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/food/usfs-gtr-513.pdf",
+     "size": 19128907,
+     "sha256": "cbf35f8b1894bc751c56e3bc62721a6df400442f04e4ab58965abbca27d93f8d",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "water",
+   "title": "Water and sanitation",
+   "blurb": "Making water safe and keeping sanitation from making people sick.",
+   "disclaimer": "chemical",
+   "items": [
+    {
+     "id": "epa-emergency-disinfection",
+     "title": "EPA: Emergency Disinfection of Drinking Water",
+     "kind": "pdf",
+     "url": "https://www.epa.gov/sites/default/files/2017-09/documents/emergency_disinfection_of_drinking_water_sept2017.pdf",
+     "license": "Public domain (US government work)",
+     "source": "US EPA",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/water/epa-emergency-disinfection.pdf",
+     "size": 754723,
+     "sha256": "f404083d00decedc267bf4265eda776bb250ccfe18c1f7b19152aa006ff727c5",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "army-fm-21-10",
+     "title": "FM 21-10 Field Hygiene and Sanitation (US Army, 2000)",
+     "kind": "pdf",
+     "url": "https://archive.org/download/FM21-10_2000/FM21-10_2000.pdf",
+     "license": "Public domain (US government work)",
+     "source": "US Army via Internet Archive",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Latrines, waste and water discipline for groups in the field.",
+     "disclaimer": null,
+     "require_text": "public release",
+     "path": "docs/water/army-fm-21-10.pdf",
+     "size": 2913453,
+     "sha256": "ad5eab029ef51085cffc213ef89284e9089aadd82445ec594bca24b750ed9b63",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "shelter",
+   "title": "Shelter, energy and repair",
+   "blurb": "Preparedness, safe shelter and working safely with power.",
+   "disclaimer": "electrical",
+   "items": [
+    {
+     "id": "fema-are-you-ready",
+     "title": "FEMA: Are You Ready? Citizen Preparedness Guide",
+     "kind": "pdf",
+     "url": "https://www.ready.gov/sites/default/files/2021-11/are-you-ready-guide.pdf",
+     "license": "Public domain (US government work)",
+     "source": "FEMA / Ready.gov",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": "general",
+     "require_text": null,
+     "path": "docs/shelter/fema-are-you-ready.pdf",
+     "size": 4233522,
+     "sha256": "3873f8ae7528389adacab72259c37b9ae3c507bd3ae23783122e06586560040c",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "osha-3075",
+     "title": "OSHA 3075: Controlling Electrical Hazards",
+     "kind": "pdf",
+     "url": "https://www.osha.gov/sites/default/files/publications/osha3075.pdf",
+     "license": "Public domain (US government work)",
+     "source": "US Department of Labor, OSHA",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/shelter/osha-3075.pdf",
+     "size": 388323,
+     "sha256": "e32343de21329cd840b9c1a620a2c4cecf173b3357039a21c773e06cebb8bdb9",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "comms",
+   "title": "Communications and navigation",
+   "blurb": "Ham radio licensing, frequency allocations and land navigation.",
+   "disclaimer": null,
+   "items": [
+    {
+     "id": "ncvec-technician",
+     "title": "FCC Technician exam question pool 2026-2030",
+     "kind": "pdf",
+     "url": "https://ncvec.org/downloads/2026-2030%20Technician%20Pool%20and%20Syllabus%20Public%20Release%20Feb%2019%202026.pdf",
+     "license": "Public domain (released by NCVEC QPC)",
+     "source": "NCVEC Question Pool Committee",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/comms/ncvec-technician.pdf",
+     "size": 480239,
+     "sha256": "3618649d64df77f2cf217fa79ef82094fe5d2d41b26d20ce08c46ca1c3d5055a",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "cfr-part-97",
+     "title": "47 CFR Part 97: Amateur Radio Service rules",
+     "kind": "pdf",
+     "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title47-vol5/pdf/CFR-2024-title47-vol5-part97.pdf",
+     "license": "Public domain (US government work)",
+     "source": "US Government Publishing Office",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/comms/cfr-part-97.pdf",
+     "size": 355594,
+     "sha256": "144b9fa5ecbb4fdbf960c9ef5512cec5ceee015be57417bc0ed17e2bd1d91618",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "fcc-allocations",
+     "title": "FCC Table of Frequency Allocations",
+     "kind": "pdf",
+     "url": "https://transition.fcc.gov/oet/spectrum/table/fcctable.pdf",
+     "license": "Public domain (US government work)",
+     "source": "Federal Communications Commission",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/comms/fcc-allocations.pdf",
+     "size": 2125394,
+     "sha256": "c173b5362104883e5edce3b45fe54e1e912277360a0ceb3ecc8a2b0b53bef30a",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "usgs-map-symbols",
+     "title": "USGS Topographic Map Symbols",
+     "kind": "pdf",
+     "url": "https://pubs.usgs.gov/gip/TopographicMapSymbols/topomapsymbols.pdf",
+     "license": "Public domain (US government work)",
+     "source": "US Geological Survey",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "docs/comms/usgs-map-symbols.pdf",
+     "size": 2197818,
+     "sha256": "edb97e137a1831e75f6fddb4971e5e46b9a68cd8ca17ef2c44480b453f49aa59",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "army-fm-3-25-26",
+     "title": "FM 3-25.26 Map Reading and Land Navigation (US Army)",
+     "kind": "pdf",
+     "url": "https://archive.org/download/FM3-25x26/FM3-25x26.pdf",
+     "license": "Public domain (US government work)",
+     "source": "US Army via Internet Archive",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "Map, compass and terrain navigation.",
+     "disclaimer": null,
+     "require_text": "public release",
+     "path": "docs/comms/army-fm-3-25-26.pdf",
+     "size": 8167056,
+     "sha256": "bf92a942048931c59f2b48b366acd9b5f8f40120b0866d702dec799a4e8be24c",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "education",
+   "title": "Education",
+   "blurb": "Textbooks, classic literature and books for children.",
+   "disclaimer": null,
+   "items": [
+    {
+     "id": "khan-academy",
+     "title": "Khan Academy (videos)",
+     "kind": "zim",
+     "zim_dir": "other",
+     "zim_prefix": "khanacademy_en_all",
+     "license": "CC BY-NC-SA 3.0",
+     "source": "Khan Academy via Kiwix",
+     "tiers": [
+      "full"
+     ],
+     "description": "Maths and science lessons from a 2023 snapshot.",
+     "disclaimer": null,
+     "url": "https://download.kiwix.org/zim/other/khanacademy_en_all_2023-03.zim",
+     "path": "zim/khanacademy_en_all_2023-03.zim",
+     "size": 180007047736,
+     "sha256": "3b8f4d286c6206a1c00c2252ac33187d30d4e146b8666ae2039d00f0d91eee3a",
+     "checksum_source": "Kiwix published .sha256",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "openstax-biology-2e",
+     "title": "OpenStax Biology 2e",
+     "kind": "pdf",
+     "slug": "biology-2e",
+     "source": "OpenStax, Rice University",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "College-level textbook.",
+     "disclaimer": null,
+     "require_text": null,
+     "url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+     "license": "Creative Commons Attribution-NonCommercial-ShareAlike License",
+     "path": "docs/education/openstax-biology-2e.pdf",
+     "size": 401298122,
+     "sha256": "4d1f413fd779f114838cdaeab7859dcb2922ca7529230d3bfd7d36a77b4e27b6",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "openstax-chemistry-2e",
+     "title": "OpenStax Chemistry 2e",
+     "kind": "pdf",
+     "slug": "chemistry-2e",
+     "source": "OpenStax, Rice University",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "College-level textbook.",
+     "disclaimer": null,
+     "require_text": null,
+     "url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+     "license": "Creative Commons Attribution-NonCommercial-ShareAlike License",
+     "path": "docs/education/openstax-chemistry-2e.pdf",
+     "size": 217794376,
+     "sha256": "fd89db1b8a1fee06b8ad3e8982f4f4b34bde4e93654a4ce28b724f8c0efe98d6",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "openstax-college-physics-2e",
+     "title": "OpenStax College Physics 2e",
+     "kind": "pdf",
+     "slug": "college-physics-2e",
+     "source": "OpenStax, Rice University",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "College-level textbook.",
+     "disclaimer": null,
+     "require_text": null,
+     "url": "https://assets.openstax.org/oscms-prodcms/media/documents/college-physics-2e_-_WEB.pdf",
+     "license": "Creative Commons Attribution-NonCommercial-ShareAlike License",
+     "path": "docs/education/openstax-college-physics-2e.pdf",
+     "size": 263463256,
+     "sha256": "a052d9fae2a90e135a74d70c001a78bb49b83280be58191e108d5de577699bb6",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "openstax-anatomy-and-physiology-2e",
+     "title": "OpenStax Anatomy and Physiology 2e",
+     "kind": "pdf",
+     "slug": "anatomy-and-physiology-2e",
+     "source": "OpenStax, Rice University",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "College-level textbook.",
+     "disclaimer": null,
+     "require_text": null,
+     "url": "https://assets.openstax.org/oscms-prodcms/media/documents/anatomy-and-physiology-2e_-_WEB.pdf",
+     "license": "Creative Commons Attribution-NonCommercial-ShareAlike License",
+     "path": "docs/education/openstax-anatomy-and-physiology-2e.pdf",
+     "size": 476335014,
+     "sha256": "aa2e577b2083c343f4d57b38f00dd935dd2d98befdb38c0f368d72d636d0ff46",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "openstax-prealgebra-2e",
+     "title": "OpenStax Prealgebra 2e",
+     "kind": "pdf",
+     "slug": "prealgebra-2e",
+     "source": "OpenStax, Rice University",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "College-level textbook.",
+     "disclaimer": null,
+     "require_text": null,
+     "url": "https://assets.openstax.org/oscms-prodcms/media/documents/prealgebra-2e_-_WEB.pdf",
+     "license": "Creative Commons Attribution-NonCommercial-ShareAlike License",
+     "path": "docs/education/openstax-prealgebra-2e.pdf",
+     "size": 63194495,
+     "sha256": "1a58f63a28535d2a84659019103df32a0fb73db0bd14ce6e533a4dff307ca2cb",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "openstax-algebra-and-trigonometry-2e",
+     "title": "OpenStax Algebra and Trigonometry 2e",
+     "kind": "pdf",
+     "slug": "algebra-and-trigonometry-2e",
+     "source": "OpenStax, Rice University",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "College-level textbook.",
+     "disclaimer": null,
+     "require_text": null,
+     "url": "https://assets.openstax.org/oscms-prodcms/media/documents/algebra-and-trigonometry-2e_-_WEB.pdf",
+     "license": "Creative Commons Attribution-NonCommercial-ShareAlike License",
+     "path": "docs/education/openstax-algebra-and-trigonometry-2e.pdf",
+     "size": 116281063,
+     "sha256": "7108d242ef7f7ee286c1d0faf4f8477570e843c1b1cdd5e3b05e8c31797da9f0",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-84",
+     "title": "Frankenstein",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/84/pg84-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-84.html",
+     "size": 468371,
+     "sha256": "5f68caa6b8065fb1fd7a672c7d115c48ae8eca1b69d380cdf4d156e9c7a1142d",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-1342",
+     "title": "Pride and Prejudice",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/1342/pg1342-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-1342.html",
+     "size": 271292,
+     "sha256": "bd20fd06957fac2b31686af14b904ba4db339e9874f265bb212bb4bdd72f362c",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-2701",
+     "title": "Moby Dick",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/2701/pg2701-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-2701.html",
+     "size": 1472551,
+     "sha256": "221f1cceeed8fc41e0d99252594bc30ca9f14954547e14f157cffaf8e987f029",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-1661",
+     "title": "The Adventures of Sherlock Holmes",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/1661/pg1661-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-1661.html",
+     "size": 237388,
+     "sha256": "8f5e0c10bbb1ceac70fb42af4bba6efff457de7711098e67081f2cd835e96486",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-521",
+     "title": "Robinson Crusoe",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/521/pg521-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-521.html",
+     "size": 234565,
+     "sha256": "d61b353b136b6271e7641699a02f5ce7f75c0ac17c379f6c45ac1e2314169b6c",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-205",
+     "title": "Walden",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/205/pg205-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-205.html",
+     "size": 685917,
+     "sha256": "e4ce1aceda201ea95d4c1717348435086d2a66e9b8f4a0c1f0249a8a823eab51",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-1228",
+     "title": "On the Origin of Species",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/1228/pg1228-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-1228.html",
+     "size": 322972,
+     "sha256": "11bd99272fb0369671a9039edd98939203c128e3ef084773c319654594d81fb3",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-11",
+     "title": "Alice's Adventures in Wonderland",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/11/pg11-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "For children.",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-11.html",
+     "size": 192539,
+     "sha256": "7df9c19e9fccac5b3ae9b1f837b247db1c1da93845dfb9e1903dce85013c43d3",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-120",
+     "title": "Treasure Island",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/120/pg120-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "For children.",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-120.html",
+     "size": 452773,
+     "sha256": "0a4f57e172679b7eb6b9d24d8f8454681cd346ee0423832d34a146fbb2d74a6b",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-2591",
+     "title": "Grimms' Fairy Tales",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/2591/pg2591-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "For children.",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-2591.html",
+     "size": 213441,
+     "sha256": "724fcab8c59f34558bb866bbbd29fae33c81ac10fd9e44d4f6e437a0dadae5f1",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-16",
+     "title": "Peter Pan",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/16/pg16-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "For children.",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-16.html",
+     "size": 316139,
+     "sha256": "ea7168cc774003433c38254464023c51c7eeb078e7067381086cad7256f51744",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-55",
+     "title": "The Wonderful Wizard of Oz",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/55/pg55-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "For children.",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-55.html",
+     "size": 260667,
+     "sha256": "a02f2cf796d7f876a67952ac2e130a7071469a2e1bf9a0210bc0308e7182c306",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "pg-11339",
+     "title": "Aesop's Fables",
+     "kind": "html",
+     "url": "https://www.gutenberg.org/cache/epub/11339/pg11339-images.html",
+     "license": "Public domain in the USA (Project Gutenberg)",
+     "source": "Project Gutenberg",
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "description": "For children.",
+     "disclaimer": null,
+     "require_text": null,
+     "path": "books/pg-11339.html",
+     "size": 374031,
+     "sha256": "a8b49ceef8e32855c8a1abedbafabf6348f5f9946cce5b146961f68f4ac3f89b",
+     "checksum_source": "Computed from a download on the verified date",
+     "last_verified": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "maps",
+   "title": "Maps",
+   "blurb": "Offline OpenStreetMap regions. Add more with the map script.",
+   "disclaimer": null,
+   "items": [
+    {
+     "id": "map-world-overview",
+     "title": "World overview",
+     "kind": "map",
+     "region": "world-overview",
+     "bbox": [
+      -180,
+      -85,
+      180,
+      85
+     ],
+     "maxzoom": 6,
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "license": "ODbL 1.0 (OpenStreetMap contributors), tiles by Protomaps",
+     "source": "OpenStreetMap via Protomaps",
+     "description": "Detail to zoom 6.",
+     "disclaimer": null,
+     "url": "https://build.protomaps.com/20261108.pmtiles",
+     "path": "maps/world-overview.pmtiles",
+     "size": 45000000,
+     "sha256": null,
+     "size_is_estimate": true,
+     "checksum_source": "Extracted per build. The hash is recorded in manifest/installed.json at extraction.",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "map-usa-lower-48",
+     "title": "United States, lower 48",
+     "kind": "map",
+     "region": "usa-lower-48",
+     "bbox": [
+      -125.0,
+      24.4,
+      -66.9,
+      49.5
+     ],
+     "maxzoom": 12,
+     "tiers": [
+      "lite",
+      "plus",
+      "standard",
+      "full"
+     ],
+     "license": "ODbL 1.0 (OpenStreetMap contributors), tiles by Protomaps",
+     "source": "OpenStreetMap via Protomaps",
+     "description": "Detail to zoom 12.",
+     "disclaimer": null,
+     "url": "https://build.protomaps.com/20261108.pmtiles",
+     "path": "maps/usa-lower-48.pmtiles",
+     "size": 2000000000,
+     "sha256": null,
+     "size_is_estimate": true,
+     "checksum_source": "Extracted per build. The hash is recorded in manifest/installed.json at extraction.",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "map-north-america",
+     "title": "North America, street level",
+     "kind": "map",
+     "region": "north-america",
+     "bbox": [
+      -170,
+      7,
+      -50,
+      84
+     ],
+     "maxzoom": 15,
+     "tiers": [
+      "standard",
+      "full"
+     ],
+     "license": "ODbL 1.0 (OpenStreetMap contributors), tiles by Protomaps",
+     "source": "OpenStreetMap via Protomaps",
+     "description": "Detail to zoom 15.",
+     "disclaimer": null,
+     "url": "https://build.protomaps.com/20261108.pmtiles",
+     "path": "maps/north-america.pmtiles",
+     "size": 37000000000,
+     "sha256": null,
+     "size_is_estimate": true,
+     "checksum_source": "Extracted per build. The hash is recorded in manifest/installed.json at extraction.",
+     "last_verified": "2026-11-09"
+    },
+    {
+     "id": "map-planet",
+     "title": "Whole planet, street level",
+     "kind": "map",
+     "region": "planet",
+     "bbox": [
+      -180,
+      -85,
+      180,
+      85
+     ],
+     "maxzoom": 15,
+     "tiers": [
+      "full"
+     ],
+     "license": "ODbL 1.0 (OpenStreetMap contributors), tiles by Protomaps",
+     "source": "OpenStreetMap via Protomaps",
+     "description": "Detail to zoom 15.",
+     "disclaimer": null,
+     "whole_planet": true,
+     "url": "https://build.protomaps.com/20261108.pmtiles",
+     "path": "maps/planet.pmtiles",
+     "size": 139369055252,
+     "sha256": null,
+     "checksum_source": "Protomaps publishes no hash. Checked with pmtiles verify, then hashed locally.",
+     "last_verified": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "ai",
+   "title": "Local AI assistant",
+   "blurb": "Small offline chat model. It makes mistakes. Never rely on it for medical or safety decisions.",
+   "disclaimer": "medical",
+   "items": [
+    {
+     "id": "ai-phi35",
+     "title": "Phi-3.5 Mini model (Q4)",
+     "kind": "file",
+     "path": "ai/Phi-3.5-mini-instruct-Q4_K_M.gguf",
+     "url": "https://huggingface.co/bartowski/Phi-3.5-mini-instruct-GGUF/resolve/main/Phi-3.5-mini-instruct-Q4_K_M.gguf",
+     "license": "MIT (Microsoft)",
+     "source": "Microsoft via Hugging Face",
+     "tiers": [
+      "plus",
+      "standard",
+      "full"
+     ],
+     "optional": true,
+     "description": "Runs on CPU. UNRELIABLE for medical or safety-critical decisions.",
+     "disclaimer": null,
+     "size": 2393232672,
+     "sha256": "e4165e3a71af97f1b4820da61079826d8752a2088e313af0c7d346796c38eff5",
+     "checksum_source": "Hugging Face LFS SHA-256",
+     "last_verified": "2026-11-09"
+    }
+   ]
+  }
+ ],
+ "tools": [
+  {
+   "id": "kiwix-windows",
+   "title": "Portable Kiwix for Windows",
+   "url": "https://ftp.fau.de/kiwix/release/kiwix-tools/kiwix-tools_win-x86_64-3.8.1.zip",
+   "platform": "windows-amd64",
+   "license": "GPL-3.0",
+   "size": 18301924,
+   "sha256": "fcd01ed2b93e9a68632c7863c83b9f66bf64406a66357be1df7b8b75596f3e45",
+   "last_verified": "2026-11-09"
+  },
+  {
+   "id": "kiwix-macos-arm64",
+   "title": "Portable Kiwix for Apple Silicon",
+   "url": "https://ftp.fau.de/kiwix/release/kiwix-tools/kiwix-tools_macos-arm64-3.8.1.tar.gz",
+   "platform": "darwin-arm64",
+   "license": "GPL-3.0",
+   "size": 10254751,
+   "sha256": "222e8398ca50ac005a7e92cf0116e0c83e3c44c79cab0bb7f6537943d517e8d3",
+   "last_verified": "2026-11-09"
+  },
+  {
+   "id": "kiwix-macos-x64",
+   "title": "Portable Kiwix for Intel Macs",
+   "url": "https://ftp.fau.de/kiwix/release/kiwix-tools/kiwix-tools_macos-x86_64-3.8.1.tar.gz",
+   "platform": "darwin-amd64",
+   "license": "GPL-3.0",
+   "size": 10768392,
+   "sha256": "70219e56f7c274e1fc0db8487abdcc91bde9a6f2923958894c0c81ee24b06c01",
+   "last_verified": "2026-11-09"
+  },
+  {
+   "id": "kiwix-linux",
+   "title": "Portable Kiwix for Linux",
+   "url": "https://ftp.fau.de/kiwix/release/kiwix-tools/kiwix-tools_linux-x86_64-musl-3.8.1.tar.gz",
+   "platform": "linux-amd64",
+   "license": "GPL-3.0",
+   "size": 20077477,
+   "sha256": "4c3b1b95622c860c2447bd1622d1aa4b41b75b2efeeb08074fbf128233caab0a",
+   "last_verified": "2026-11-09"
+  },
+  {
+   "id": "llama-linux",
+   "title": "llama.cpp CPU runtime",
+   "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12211/llama-b12211-bin-ubuntu-x64.tar.gz",
+   "platform": "linux-amd64-ai",
+   "license": "MIT",
+   "optional": true,
+   "size": 23109987,
+   "sha256": "962924b5431bc1237a9e5d26ba072d37b6fe05f79b495206e7ff6134887624c5",
+   "last_verified": "2026-11-09"
+  },
+  {
+   "id": "pmtiles-linux",
+   "title": "pmtiles extractor",
+   "url": "https://github.com/protomaps/go-pmtiles/releases/download/v1.31.2/go-pmtiles_1.31.2_Linux_x86_64.tar.gz",
+   "platform": "build",
+   "license": "BSD-3-Clause",
+   "size": 17444324,
+   "sha256": "3ed7dbf4ec2e6dfe5e25b6f70d1ffc932729f93c86db353bf514dd71010a312f",
+   "last_verified": "2026-11-09"
+  }
+ ],
+ "last_verified": "2026-11-09"
+}

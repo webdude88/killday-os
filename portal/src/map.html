@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Map - The Kill-Day Almanac</title><link rel="icon" href="img/favicon.ico"><link rel="stylesheet" href="css/almanac.css"><link rel="stylesheet" href="vendor/maplibre-gl.css"></head>
+<body><main><h1>Offline map</h1>
+<p><label for="region">Region: </label><select id="region"></select> <button type="button" class="button" id="home" hidden>Home area</button> <span class="hint">&copy; OpenStreetMap contributors</span></p>
+<div id="map"></div>
+<p class="hint" id="maphint"></p></main>
+<script src="js/common.js"></script>
+<script src="vendor/maplibre-gl.js"></script><script src="vendor/pmtiles.js"></script><script src="vendor/basemaps.js"></script>
+<script>
+(async function () {
+  KD.header();
+  await KD.load();
+  const select = document.getElementById("region");
+  const hint = document.getElementById("maphint");
+  const params = new URLSearchParams(location.search);
+  const maps = KD.status.maps;
+  if (!maps.length) { document.getElementById("map").style.display = "none"; hint.textContent = "Corrupted? Still alive. No map regions are installed on this drive."; document.body.dataset.mapState = "none"; return; }
+  select.innerHTML = maps.map((name) => `<option value="${KD.esc(name)}">${KD.esc(name.replace(/\.pmtiles$/, "").replace(/-/g, " "))}</option>`).join("");
+  if (params.get("region")) select.value = params.get("region");
+
+  const protocol = new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile);
+  const flavor = { ...basemaps.namedFlavor("dark"), background: "#0B0F0C", earth: "#131A15", water: "#10323a" };
+  const origin = location.origin;
+  function style(name) {
+    return {
+      version: 8,
+      glyphs: `${origin}/vendor/map-assets/fonts/{fontstack}/{range}.pbf`,
+      sprite: `${origin}/vendor/map-assets/sprites/v4/dark`,
+      sources: { protomaps: { type: "vector", url: `pmtiles://${origin}/library/maps/${encodeURIComponent(name)}`, attribution: "OpenStreetMap" } },
+      layers: basemaps.layers("protomaps", flavor, { lang: "en" }),
+    };
+  }
+  async function fitRegion(map, name) {
+    const header = await new pmtiles.PMTiles(`${origin}/library/maps/${encodeURIComponent(name)}`).getHeader();
+    map.fitBounds([[header.minLon, header.minLat], [header.maxLon, header.maxLat]], { padding: 20, duration: 0 });
+  }
+  // The home area is drawn on every region, and the map opens on it when the region covers it.
+  let home = null;
+  try { home = await (await fetch("data/home-area.geojson")).json(); } catch (error) { home = null; }
+  const homeButton = document.getElementById("home");
+  if (home) { homeButton.textContent = home.name; homeButton.hidden = false; }
+  function addHome() {
+    if (!home || map.getSource("home")) return;
+    map.addSource("home", { type: "geojson", data: home });
+    map.addLayer({ id: "home-fill", type: "fill", source: "home", filter: ["==", ["get", "kind"], "area"], paint: { "fill-color": "#FF3B4E", "fill-opacity": 0.14 } });
+    map.addLayer({ id: "home-glow", type: "line", source: "home", filter: ["==", ["get", "kind"], "area"], paint: { "line-color": "#FF3B4E", "line-width": 9, "line-opacity": 0.3, "line-blur": 4 } });
+    map.addLayer({ id: "home-line", type: "line", source: "home", filter: ["==", ["get", "kind"], "area"], paint: { "line-color": "#FF3B4E", "line-width": 2.5 } });
+    map.addLayer({ id: "home-label", type: "symbol", source: "home", filter: ["==", ["get", "kind"], "label"],
+      layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Medium"], "text-size": ["interpolate", ["linear"], ["zoom"], 5, 11, 10, 18], "text-letter-spacing": 0.15, "text-allow-overlap": true },
+      paint: { "text-color": "#FF3B4E", "text-halo-color": "#0B0F0C", "text-halo-width": 2 } });
+  }
+  function showHome(map) { map.fitBounds([[home.bbox[0], home.bbox[1]], [home.bbox[2], home.bbox[3]]], { padding: 40, duration: 0 }); }
+  async function regionCoversHome(name) {
+    if (!home) return false;
+    const h = await new pmtiles.PMTiles(`${origin}/library/maps/${encodeURIComponent(name)}`).getHeader();
+    return h.minLon <= home.bbox[0] && h.minLat <= home.bbox[1] && h.maxLon >= home.bbox[2] && h.maxLat >= home.bbox[3] && h.maxZoom >= 10;
+  }
+  if (!params.get("region") && home) {
+    for (const name of maps) { if (await regionCoversHome(name)) { select.value = name; break; } }
+  }
+  const map = new maplibregl.Map({ container: "map", style: style(select.value), center: [0, 20], zoom: 1, canvasContextAttributes: { preserveDrawingBuffer: true } });
+  map.addControl(new maplibregl.NavigationControl());
+  map.addControl(new maplibregl.ScaleControl());
+  map.on("style.load", addHome);
+  map.on("load", async () => {
+    if (await regionCoversHome(select.value)) showHome(map); else fitRegion(map, select.value);
+  });
+  homeButton.addEventListener("click", async () => {
+    if (!(await regionCoversHome(select.value))) {
+      for (const name of maps) { if (await regionCoversHome(name)) { select.value = name; map.setStyle(style(name)); break; } }
+    }
+    showHome(map);
+  });
+  map.on("error", (event) => { console.error("map error", event.error && event.error.message); document.body.dataset.mapError = (event.error && event.error.message) || "unknown"; });
+  map.on("idle", () => { document.body.dataset.mapState = map.queryRenderedFeatures().length ? "rendered" : "empty"; });
+  select.addEventListener("change", () => { map.setStyle(style(select.value)); fitRegion(map, select.value); });
+})();
+</script></body></html>

@@ -1,0 +1,28 @@
+#!/bin/bash
+# Reports boot state over the serial port so the host-side smoke test can read it.
+say() { echo "KD-SELFTEST $1"; }
+say "boot=ok"
+for _ in $(seq 1 180); do
+    curl -fs -o /dev/null http://127.0.0.1:8642/ && break
+    sleep 1
+done
+say "portal=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8642/)"
+if findmnt -n /srv/library >/dev/null; then say "library=mounted"; else say "library=missing"; fi
+status=$(curl -s http://127.0.0.1:8642/api/status)
+say "persistence=$(jq -r '.persistence' <<<"$status")"
+for _ in $(seq 1 90); do
+    status=$(curl -s http://127.0.0.1:8642/api/status)
+    [ "$(jq -r '.kiwix' <<<"$status")" = "true" ] && break
+    sleep 1
+done
+say "kiwix=$(jq -r '.kiwix' <<<"$status")"
+say "maps=$(jq -r '.maps | length' <<<"$status")"
+home=/home/survivor
+for _ in $(seq 1 120); do [ -d "$home" ] && break; sleep 1; done
+if [ -f "$home/.kd-marker" ]; then say "marker=present"; else say "marker=absent"; echo kept > "$home/.kd-marker"; fi
+for _ in $(seq 1 180); do pgrep -x xfdesktop >/dev/null && break; sleep 1; done
+if pgrep -x xfdesktop >/dev/null; then say "desktop=up"; else say "desktop=down"; fi
+say "done"
+# Closes the browser so the smoke test can photograph the bare themed desktop.
+sleep 45
+pkill -f firefox-esr

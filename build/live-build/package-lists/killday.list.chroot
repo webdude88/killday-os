@@ -1,0 +1,115 @@
+# Live system
+live-boot
+live-config
+live-config-systemd
+cryptsetup
+cryptsetup-initramfs
+plymouth
+plymouth-label
+sudo
+user-setup
+# Boot chain for Secure Boot and BIOS
+linux-image-amd64
+shim-signed
+grub-efi-amd64-signed
+grub-pc-bin
+grub-efi-amd64-bin
+memtest86+
+# Desktop
+xorg
+xserver-xorg-video-all
+lightdm
+lightdm-gtk-greeter
+xfce4
+xfce4-terminal
+xfce4-power-manager
+xfce4-notifyd
+xfce4-screenshooter
+thunar-archive-plugin
+thunar-volman
+gvfs
+gvfs-backends
+dbus-x11
+x11-xserver-utils
+xdg-utils
+libnotify-bin
+adwaita-icon-theme
+pipewire-audio
+pavucontrol
+fonts-dejavu
+fonts-noto-core
+# Core apps
+firefox-esr
+libreoffice-writer
+libreoffice-calc
+libreoffice-gtk3
+evince
+foliate
+mousepad
+ristretto
+vlc
+xarchiver
+p7zip-full
+unzip
+zip
+# Security and privacy
+keepassxc
+gnupg
+pinentry-gtk2
+gnome-disk-utility
+mat2
+# Recovery
+gparted
+testdisk
+gddrescue
+rsync
+smartmontools
+ntfs-3g
+exfatprogs
+dosfstools
+hdparm
+nvme-cli
+# Networking and radio
+network-manager
+network-manager-gnome
+iputils-ping
+traceroute
+mtr-tiny
+dnsutils
+iperf3
+nmap
+curl
+wget
+openssh-client
+batctl
+fldigi
+direwolf
+gqrx-sdr
+chirp
+# Power
+tlp
+tlp-rdw
+brightnessctl
+powertop
+# Library engine and the audit tool
+python3
+jq
+kiwix-tools
+# Firmware
+firmware-linux
+firmware-linux-nonfree
+firmware-misc-nonfree
+firmware-iwlwifi
+firmware-realtek
+firmware-atheros
+firmware-brcm80211
+firmware-libertas
+firmware-amd-graphics
+firmware-bnx2
+firmware-bnx2x
+firmware-sof-signed
+firmware-ti-connectivity
+firmware-zd1211
+amd64-microcode
+intel-microcode
+zstd

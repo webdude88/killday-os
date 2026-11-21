@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=KillDay
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=KillDay
+MetacityTheme=Default
+IconTheme=Adwaita

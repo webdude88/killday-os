@@ -1,0 +1,14 @@
+#!/bin/sh
+# Puts the LUKS tools in the initramfs. Nothing in /etc/crypttab references the
+# persistence partition, so the stock cryptroot hook would otherwise skip them.
+PREREQ=""
+prereqs() { echo "$PREREQ"; }
+case "$1" in prereqs) prereqs; exit 0 ;; esac
+# shellcheck disable=SC1091
+. /usr/share/initramfs-tools/hook-functions
+copy_exec /sbin/cryptsetup /sbin
+copy_exec /sbin/blkid /sbin
+copy_exec /usr/lib/cryptsetup/askpass /lib/cryptsetup
+for module in dm_crypt dm_mod xts aes_generic aesni_intel sha256_generic sha512_generic algif_skcipher af_alg exfat ext4 overlay squashfs; do
+    manual_add_modules "$module"
+done

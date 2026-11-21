@@ -1,0 +1,85 @@
+// Kill-Day OS boot splash. The skull glitches in for 2.4 s, the day counter
+// reaches DAY 0 at 3 s, and everything then holds still. Esc shows boot text.
+Window.SetBackgroundTopColor(0.043, 0.059, 0.047);
+Window.SetBackgroundBottomColor(0.043, 0.059, 0.047);
+
+center_x = Window.GetWidth() / 2;
+center_y = Window.GetHeight() / 2;
+frame_total = 24;
+ticks_per_frame = 5;
+ticks_per_day = 50;
+
+for (i = 0; i < frame_total; i++) {
+    suffix = i;
+    if (i < 10) suffix = "0" + i;
+    frames[i] = Image("skull-" + suffix + ".png");
+}
+final_frame = Image("skull-final.png");
+skull_sprite = Sprite(frames[0]);
+skull_sprite.SetX(center_x - final_frame.GetWidth() / 2);
+skull_sprite.SetY(center_y - final_frame.GetHeight() / 2 - 60);
+
+word = Image("wordmark.png");
+word_sprite = Sprite(word);
+word_sprite.SetX(center_x - word.GetWidth() / 2);
+word_sprite.SetY(center_y + final_frame.GetHeight() / 2 - 60);
+
+for (i = 0; i < 4; i++) day_images[i] = Image("day-" + i + ".png");
+day_sprite = Sprite(day_images[3]);
+day_y = center_y + final_frame.GetHeight() / 2 + 20;
+day_sprite.SetX(center_x - day_images[3].GetWidth() / 2);
+day_sprite.SetY(day_y);
+
+tick = 0;
+fun refresh_callback() {
+    tick++;
+    frame = Math.Int(tick / ticks_per_frame);
+    if (frame < frame_total) skull_sprite.SetImage(frames[frame]);
+    else skull_sprite.SetImage(final_frame);
+
+    remaining = 3 - Math.Int(tick / ticks_per_day);
+    if (remaining < 0) remaining = 0;
+    day_sprite.SetImage(day_images[remaining]);
+    day_sprite.SetX(center_x - day_images[remaining].GetWidth() / 2);
+}
+Plymouth.SetRefreshFunction(refresh_callback);
+
+prompt_image = Image("prompt.png");
+bullet_image = Image("bullet.png");
+prompt_sprite = Sprite();
+prompt_y = day_y + 60;
+bullets = [];
+
+fun clear_bullets() {
+    for (i = 0; bullets[i]; i++) bullets[i].SetOpacity(0);
+}
+
+fun display_normal_callback() {
+    prompt_sprite.SetOpacity(0);
+    clear_bullets();
+}
+
+fun display_password_callback(prompt, count) {
+    prompt_sprite.SetImage(prompt_image);
+    prompt_sprite.SetX(center_x - prompt_image.GetWidth() / 2);
+    prompt_sprite.SetY(prompt_y);
+    prompt_sprite.SetOpacity(1);
+    clear_bullets();
+    for (i = 0; i < count && i < 32; i++) {
+        if (!bullets[i]) bullets[i] = Sprite(bullet_image);
+        bullets[i].SetX(center_x - 16 * 12 + i * 24);
+        bullets[i].SetY(prompt_y + 50);
+        bullets[i].SetOpacity(1);
+    }
+}
+Plymouth.SetDisplayNormalFunction(display_normal_callback);
+Plymouth.SetDisplayPasswordFunction(display_password_callback);
+
+message_sprite = Sprite();
+fun message_callback(text) {
+    message_image = Image.Text(text, 1.0, 0.23, 0.31);
+    message_sprite.SetImage(message_image);
+    message_sprite.SetX(center_x - message_image.GetWidth() / 2);
+    message_sprite.SetY(prompt_y + 90);
+}
+Plymouth.SetMessageFunction(message_callback);

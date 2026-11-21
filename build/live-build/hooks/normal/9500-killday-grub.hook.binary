@@ -1,0 +1,12 @@
+#!/bin/sh
+# Replaces live-build's generated menu with the shared Kill-Day menu, and gives
+# the kernel and initrd the stable names that menu expects.
+set -e
+for name in vmlinuz initrd.img; do
+    if [ ! -e "live/$name" ]; then
+        found=$(find live -maxdepth 1 -name "$name-*" | head -1)
+        cp "$found" "live/$name"
+    fi
+done
+cp ../config/killday/grub.cfg boot/grub/grub.cfg
+cp ../config/killday/grub.cfg boot/grub/loopback.cfg 2>/dev/null || true

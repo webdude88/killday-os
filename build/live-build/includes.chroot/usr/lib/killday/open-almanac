@@ -1,0 +1,7 @@
+#!/bin/bash
+# Waits for the portal, then opens it. Runs once at login.
+for _ in $(seq 1 60); do
+    curl -fs -o /dev/null http://127.0.0.1:8642/ && break
+    sleep 1
+done
+exec firefox-esr --new-window "${1:-http://127.0.0.1:8642/}"

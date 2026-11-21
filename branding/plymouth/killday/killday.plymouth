@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Kill-Day OS
+Description=Glitch skull boot splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/killday
+ScriptFile=/usr/share/plymouth/themes/killday/killday.script

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Runs a project script inside the builder or tester container, so a Mac or any
+# Linux host can build without installing tools. Usage: build/kd <builder|tester> CMD...
+set -euo pipefail
+root="$(cd "$(dirname "$0")/.." && pwd)"
+kind="${1:?usage: kd builder|tester|usb|images command...}"
+shift
+
+build_images() {
+    docker build -q --platform linux/amd64 -t killday-builder -f "$root/build/docker/Dockerfile.builder" "$root/build/docker"
+    docker build -q -t killday-tester -f "$root/build/docker/Dockerfile.tester" "$root/build/docker"
+}
+
+case "$kind" in
+    images) build_images ;;
+    builder)
+        # /build is a Docker volume because live-build needs device nodes and
+        # real ownership, which host bind mounts cannot provide on macOS.
+        docker run --rm --platform linux/amd64 --privileged --cpus="${KD_CPUS:-6}" \
+            -v "$root:/work" -v killday-build:/build -e KD_VERSION -e KD_TIER -e KD_STAGING \
+            -w /work killday-builder "$@"
+        ;;
+    usb)
+        # Linux hosts only. --pid=host lets the disk guards read the host's mounts.
+        docker run --rm -it --platform linux/amd64 --privileged --pid=host -v /dev:/dev \
+            -v "$root:/work" -w /work killday-builder build/write-usb.sh "$@"
+        ;;
+    tester)
+        docker run --rm --cpus="${KD_CPUS:-6}" -v "$root:/work" -v killday-build:/build -w /work killday-tester "$@"
+        ;;
+    *) echo "unknown container kind: $kind" >&2; exit 2 ;;
+esac

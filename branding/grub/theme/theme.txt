@@ -1,0 +1,43 @@
+# Kill-Day OS GRUB theme
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#0B0F0C"
+terminal-font: "KillDay Mono Regular 16"
+
++ boot_menu {
+    left = 18%
+    top = 37%
+    width = 64%
+    height = 44%
+    item_font = "KillDay Mono Regular 18"
+    item_color = "#E6EBE0"
+    selected_item_color = "#8CFF5A"
+    selected_item_font = "KillDay Mono Regular 18"
+    selected_item_pixmap_style = "select_*.png"
+    item_height = 38
+    item_padding = 12
+    item_spacing = 6
+    scrollbar = false
+}
+
++ label {
+    left = 0
+    top = 86%
+    width = 100%
+    align = "center"
+    color = "#9DB09A"
+    font = "KillDay Mono Regular 14"
+    text = "Corrupted? Still alive.   Up/Down to choose, Enter to boot."
+}
+
++ progress_bar {
+    id = "__timeout__"
+    left = 18%
+    top = 91%
+    width = 64%
+    height = 6
+    fg_color = "#8CFF5A"
+    bg_color = "#1A231C"
+    border_color = "#1A231C"
+    text = ""
+}

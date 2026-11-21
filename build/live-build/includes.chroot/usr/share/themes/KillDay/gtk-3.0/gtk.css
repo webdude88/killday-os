@@ -1,0 +1,19 @@
+/* Kill-Day OS: Adwaita dark geometry with the Kill-Day palette. */
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk-contained-dark.css");
+@define-color theme_bg_color #0B0F0C;
+@define-color theme_base_color #131A15;
+@define-color theme_fg_color #E6EBE0;
+@define-color theme_text_color #E6EBE0;
+@define-color theme_selected_bg_color #8CFF5A;
+@define-color theme_selected_fg_color #0B0F0C;
+@define-color insensitive_fg_color #9DB09A;
+@define-color warning_color #FF3B4E;
+@define-color error_color #FF3B4E;
+window, .background { background-color: #0B0F0C; color: #E6EBE0; }
+selection, *:selected { background-color: #8CFF5A; color: #0B0F0C; }
+.xfce4-panel, #XfcePanelWindow { background-color: #0B0F0C; color: #E6EBE0; }
+button:hover { border-color: #8CFF5A; }
+/* Desktop icon labels must stay legible on the dark wallpaper. */
+XfdesktopIconView.view, .xfdesktop-icon-view.view, XfdesktopIconView, .xfdesktop-icon-view { color: #E6EBE0; background: transparent; }
+XfdesktopIconView.label, .xfdesktop-icon-view .label, .xfdesktop-icon-view label { color: #E6EBE0; text-shadow: 0 1px 2px #000000; }
+XfdesktopIconView.rubberband, .xfdesktop-icon-view.rubberband { background-color: rgba(140, 255, 90, 0.2); }

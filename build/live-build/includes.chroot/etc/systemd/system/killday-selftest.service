@@ -1,0 +1,13 @@
+[Unit]
+Description=Kill-Day smoke-test probe (only with killday.test on the kernel command line)
+ConditionKernelCommandLine=killday.test
+After=killday-almanac.service graphical.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/killday/selftest
+StandardOutput=tty
+TTYPath=/dev/ttyS0
+
+[Install]
+WantedBy=graphical.target

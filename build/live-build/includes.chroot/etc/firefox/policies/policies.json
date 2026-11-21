@@ -1,0 +1,1 @@
+{"policies":{"Homepage":{"URL":"http://127.0.0.1:8642/","Locked":false,"StartPage":"homepage"},"OverrideFirstRunPage":"","OverridePostUpdatePage":"","DisableTelemetry":true,"DisableFirefoxStudies":true,"DisablePocket":true,"DontCheckDefaultBrowser":true,"NoDefaultBookmarks":true,"DisableAppUpdate":true}}

@@ -1,0 +1,4 @@
+#!/bin/sh
+# Rebuilds the initramfs last so it contains the Plymouth theme and LUKS tools.
+set -e
+update-initramfs -u -k all

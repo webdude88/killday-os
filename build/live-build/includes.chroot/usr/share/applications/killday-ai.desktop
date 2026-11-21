@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=AI assistant (unreliable)
+Comment=Offline chat model. It makes mistakes. Never use it for medical or safety decisions.
+Exec=/usr/local/bin/killday-ai
+Icon=utilities-terminal
+Terminal=true
+Categories=Utility;

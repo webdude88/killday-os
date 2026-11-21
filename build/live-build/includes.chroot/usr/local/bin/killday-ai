@@ -1,0 +1,20 @@
+#!/bin/bash
+# Starts the optional offline chat model, when it is installed in the library.
+runtime=/srv/library/tools/linux-amd64-ai
+model=/srv/library/ai/Phi-3.5-mini-instruct-Q4_K_M.gguf
+if [ ! -x "$runtime/llama-cli" ] || [ ! -f "$model" ]; then
+    echo "Corrupted? Still alive. The AI module is not installed on this drive."
+    [ -t 0 ] && read -r -p "Press Enter to close."
+    exit 1
+fi
+cat <<'WARNING'
+WARNING: This assistant is unreliable. It invents facts and states them confidently.
+Do not use it for medical, chemical, electrical or other safety-critical decisions.
+Check anything important against the guides in The Kill-Day Almanac.
+
+WARNING
+system="You are an offline assistant on a survival USB drive. Answer briefly and plainly. \
+You can be wrong. For anything medical, chemical, electrical or otherwise safety-critical, \
+say clearly that the user must check the guides in The Kill-Day Almanac or ask a professional."
+# llama-cli chats by default. Type /exit or press Ctrl+C to leave.
+LD_LIBRARY_PATH="$runtime" exec "$runtime/llama-cli" -m "$model" -sys "$system" -c 4096 --threads "$(nproc)"

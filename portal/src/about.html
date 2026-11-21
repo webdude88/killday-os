@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Kill-Day OS</title><link rel="icon" href="img/favicon.ico"><link rel="stylesheet" href="css/almanac.css"></head>
+<body><main><h1>About Kill-Day OS</h1>
+<div class="prose"><p>Corrupted? Still alive. Kill-Day OS is a bootable offline survival library built only from open-source, freely licensed and public-domain material.</p></div>
+<div class="scroll"><table id="facts"></table></div>
+<h2 class="pixel">Content summary</h2><div class="scroll"><table id="summary"></table></div>
+<h2 class="pixel">License credits</h2><div class="scroll"><table id="credits"></table></div>
+<h2 class="pixel">Software and fonts</h2>
+<div class="prose"><p>Built on Debian GNU/Linux with live-build. Library engine: Kiwix (GPL-3.0). Search: Pagefind (MIT). Maps: MapLibre GL JS (BSD-3-Clause), PMTiles and Protomaps (BSD-3-Clause), map data from OpenStreetMap contributors (ODbL), and the optional home-area outline from the US Census Bureau (public domain). Fonts: Press Start 2P, JetBrains Mono and Space Grotesk (SIL Open Font License 1.1).</p></div>
+</main><script src="js/common.js"></script>
+<script>
+(async function () {
+  KD.header();
+  await KD.load();
+  const info = await fetch("build-info.json").then((r) => r.json()).catch(() => ({}));
+  const facts = [["Version", info.version], ["Tier", info.tier], ["Build date", info.build_date], ["Content last verified", info.content_verified], ["Encrypted storage", KD.status.persistence ? "Unlocked" : "Locked or not in use"]];
+  document.getElementById("facts").innerHTML = facts.map(([k, v]) => `<tr><th>${k}</th><td>${KD.esc(v || "unknown")}</td></tr>`).join("");
+  document.getElementById("summary").innerHTML = "<tr><th>Module</th><th>Installed</th></tr>" + KD.catalog.modules.map((m) => `<tr><td>${KD.esc(m.title)}</td><td>${m.items.filter(KD.isInstalled).length} of ${m.items.length}</td></tr>`).join("");
+  document.getElementById("credits").innerHTML = "<tr><th>Work</th><th>License</th><th>Source</th></tr>" + KD.allItems().map((i) => `<tr><td>${KD.esc(i.title)}</td><td>${KD.esc(i.license)}</td><td>${KD.esc(i.source)}</td></tr>`).join("");
+})();
+</script></body></html>

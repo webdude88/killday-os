@@ -1,0 +1,13 @@
+[Unit]
+Description=Kill-Day library partition (read-only)
+ConditionPathExists=/dev/disk/by-label/KILLDAY_LIB
+
+[Mount]
+What=/dev/disk/by-label/KILLDAY_LIB
+Where=/srv/library
+Type=exfat
+# Read-only: exFAT has no journal, so this protects the library from power loss.
+Options=ro,noatime,uid=0,gid=0,umask=022
+
+[Install]
+WantedBy=multi-user.target

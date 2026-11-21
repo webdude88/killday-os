@@ -1,0 +1,23 @@
+#!/bin/bash
+# Applies per-display desktop settings that xfconf defaults cannot express,
+# because XFCE keys the wallpaper by the name of each connected monitor.
+wallpaper=/usr/share/backgrounds/killday/killday-wallpaper.png
+mapfile -t monitors < <(xrandr --listmonitors | awk 'NR>1 {print $NF}')
+for monitor in "${monitors[@]}"; do
+    base="/backdrop/screen0/monitor${monitor}/workspace0"
+    xfconf-query -c xfce4-desktop -p "$base/last-image" -n -t string -s "$wallpaper"
+    xfconf-query -c xfce4-desktop -p "$base/image-style" -n -t int -s 5
+done
+
+desktop="$HOME/Desktop"
+mkdir -p "$desktop"
+launchers=(killday-almanac killday-rescue killday-battery-saver)
+# The assistant only gets an icon on drives that carry the model.
+[ -f /srv/library/ai/Phi-3.5-mini-instruct-Q4_K_M.gguf ] && launchers+=(killday-ai)
+for name in "${launchers[@]}"; do
+    target="$desktop/$name.desktop"
+    cp -f "/usr/share/applications/$name.desktop" "$target"
+    chmod +x "$target"
+    # XFCE refuses to launch desktop files unless their checksum is marked trusted.
+    gio set -t string "$target" metadata::xfce-exe-checksum "$(sha256sum "$target" | cut -d' ' -f1)"
+done

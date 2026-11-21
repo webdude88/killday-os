@@ -1,0 +1,17 @@
+#!/bin/sh
+# Applies Kill-Day branding and enables services inside the image.
+set -e
+cat > /etc/os-release <<'REL'
+PRETTY_NAME="Kill-Day OS"
+NAME="Kill-Day OS"
+ID=killday
+ID_LIKE=debian
+HOME_URL="http://127.0.0.1:8642/"
+REL
+printf '%s\n' 'Kill-Day OS \n \l  -  Corrupted? Still alive.' > /etc/issue
+echo killday > /etc/hostname
+fc-cache -f
+systemctl enable srv-library.mount killday-almanac.service killday-selftest.service NetworkManager tlp
+systemctl mask systemd-networkd-wait-online.service NetworkManager-wait-online.service
+gtk-update-icon-cache -f /usr/share/icons/hicolor >/dev/null 2>&1 || true
+plymouth-set-default-theme killday

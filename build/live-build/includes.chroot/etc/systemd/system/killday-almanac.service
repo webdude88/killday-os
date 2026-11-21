@@ -1,0 +1,12 @@
+[Unit]
+Description=The Kill-Day Almanac
+After=srv-library.mount network.target
+
+[Service]
+ExecStart=/usr/lib/killday/almanac-start
+User=nobody
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

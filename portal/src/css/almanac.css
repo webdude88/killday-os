@@ -1,0 +1,52 @@
+@font-face { font-family: "Press Start 2P"; src: url("../fonts/PressStart2P-Regular.ttf"); font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("../fonts/JetBrainsMono[wght].ttf"); font-weight: 100 800; font-display: swap; }
+@font-face { font-family: "Space Grotesk"; src: url("../fonts/SpaceGrotesk[wght].ttf"); font-weight: 300 700; font-display: swap; }
+:root {
+  --bg: #0B0F0C; --panel: #131A15; --line: #2A372D;
+  --green: #8CFF5A; --red: #FF3B4E; --bone: #E6EBE0; --muted: #9DB09A;
+}
+* { box-sizing: border-box; }
+html { font-size: 18px; }
+body { margin: 0; background: var(--bg); color: var(--bone); font-family: "JetBrains Mono", monospace; line-height: 1.55; }
+a { color: var(--green); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--bone); outline-offset: 2px; }
+header.top { display: flex; align-items: center; gap: 18px; padding: 18px 24px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+header.top img { width: 64px; height: 64px; }
+.brand { text-decoration: none; display: flex; gap: 16px; align-items: center; }
+.wordmark { font-family: "Press Start 2P", monospace; color: var(--green); font-size: 1.15rem; text-shadow: 0 0 10px rgba(140,255,90,.55); white-space: nowrap; }
+.wordmark .hy { color: var(--red); text-shadow: 0 0 10px rgba(255,59,78,.55); }
+.tagline { color: var(--muted); font-size: .85rem; }
+nav.links { margin-left: auto; display: flex; gap: 20px; flex-wrap: wrap; }
+nav.links a { text-decoration: none; font-size: .95rem; padding: 6px 2px; }
+main { max-width: 1120px; margin: 0 auto; padding: 28px 24px 72px; }
+h1, h2.pixel { font-family: "Press Start 2P", monospace; color: var(--green); font-weight: 400; line-height: 1.5; }
+h1 { font-size: 1.35rem; margin: 8px 0 18px; }
+h2.pixel { font-size: 1rem; margin: 34px 0 14px; }
+.prose { font-family: "Space Grotesk", sans-serif; font-size: 1.15rem; max-width: 46rem; }
+.prose h2 { color: var(--green); font-size: 1.3rem; margin-top: 2rem; }
+.search { display: flex; gap: 10px; margin: 10px 0 8px; }
+.search input { flex: 1; min-width: 0; font: inherit; font-size: 1.4rem; padding: 18px 20px; background: var(--panel); color: var(--bone); border: 2px solid var(--green); border-radius: 4px; }
+.search button, .button { font: inherit; font-weight: 700; padding: 0 24px; min-height: 48px; background: var(--green); color: var(--bg); border: 0; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; }
+.hint { color: var(--muted); font-size: .9rem; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.tile { display: block; padding: 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; text-decoration: none; color: var(--bone); }
+.tile:hover, .tile:focus-visible { border-color: var(--green); }
+.tile h3 { margin: 0 0 6px; color: var(--green); font-size: 1.05rem; }
+.tile p { margin: 0; color: var(--muted); font-size: .88rem; }
+.tile.missing { opacity: .55; }
+.tag { display: inline-block; font-size: .72rem; padding: 2px 7px; border: 1px solid var(--line); color: var(--muted); border-radius: 3px; margin-top: 8px; }
+.tag.warn { color: var(--bone); border-color: var(--red); }
+.result { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.result a { font-size: 1.05rem; font-weight: 700; }
+.result p { margin: 4px 0 0; color: var(--bone); font-size: .9rem; font-family: "Space Grotesk", sans-serif; }
+.result mark { background: none; color: var(--green); font-weight: 700; }
+.source { color: var(--muted); font-size: .8rem; }
+.warning { background: #3a0d13; border-left: 5px solid var(--red); color: #fff; padding: 14px 18px; margin: 16px 0; font-family: "Space Grotesk", sans-serif; font-size: 1.05rem; font-weight: 600; }
+.status { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: .85rem; margin-top: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: .85rem; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.scroll { overflow-x: auto; }
+#map { height: calc(100vh - 230px); min-height: 380px; border: 1px solid var(--line); }
+#reader { width: 100%; height: calc(100vh - 240px); min-height: 420px; border: 1px solid var(--line); background: #fff; }
+select { font: inherit; padding: 10px; background: var(--panel); color: var(--bone); border: 1px solid var(--green); }
+@media (max-width: 640px) { html { font-size: 16px; } .search { flex-direction: column; } .search button { min-height: 56px; justify-content: center; } }
